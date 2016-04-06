@@ -5,8 +5,10 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "bento/centos-6.7"
-  config.vm.box_version = "2.2.5"
+  config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
+  
+  config.vm.box = "centos/7"
+  config.vm.box_version = "1603.01"
 
   #config.vm.network :forwarded_port, guest: 80, host: 80
 
@@ -18,10 +20,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.hostname = "ansible"
     host.vm.network "private_network", ip: "192.168.33.11"
     host.vm.provision :shell, :path => "provision.sh"
-  end
-
-  if Vagrant.has_plugin?("vagrant-cachier")
-    config.cache.scope = :box
   end
   
 end
