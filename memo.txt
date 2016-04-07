@@ -1,0 +1,97 @@
+    1  cd /home/vagrant/
+    2  ll
+    3  cd provisioner/
+    4  ll
+    5  cd
+    6  wget http://www.apache.org/dist/mesos/0.28.0/mesos-0.28.0.tar.gz
+    7  ll
+    8  tar zxf mesos-0.28.0.tar.gz 
+    9  ll
+   10  cd mesos-0.28.0/
+   11  ll
+   12  yum list | grep gcc
+   13  ./bootstrap 
+   14  yum install autoreconf
+   15  yum list | grep autoconf
+   16  yum list installed | grep autoconf
+   17  yum install autoconf
+   18  ./bootstrap 
+   19  ll
+   20  mkdir build
+   21  cd build/
+   22  ../configure --help
+   23  pwd
+   24  ../configure --prefix=/usr/local/mesos0.28.0
+   25  yum install gcc
+   26  ../configure --prefix=/usr/local/mesos0.28.0
+   27  yum list | grep 'g++'
+   28  yum list | grep 'C++'
+   29  yum list | grep 'v++'
+   30  yum list | grep 'c++'
+   31  yum install gcc-c++
+   32  ../configure --prefix=/usr/local/mesos0.28.0
+   33  yum install patch
+   34  ../configure --prefix=/usr/local/mesos0.28.0
+   35  yum list | grep libz
+   36  yum list | grep zlib
+   37  yum install zlib
+   38  yum install zlib-devel
+   39  ../configure --prefix=/usr/local/mesos0.28.0
+   40  yum list | grep libcurl
+   41  yum install libcurl-devel
+   42  ../configure --prefix=/usr/local/mesos0.28.0
+   43  yum install libapr
+   44  yum list | grep libapr
+   45  yum list | grep apr
+   46  yum list | grep apr-devel
+   47  yum install apr-devel
+   48  ../configure --prefix=/usr/local/mesos0.28.0
+   49  yum list | grep libsvn
+   50  yum list | grep svn
+   51  yum list | grep svn | devel
+   52  yum list | grep svn | grep devel
+   53  yum list | grep subversion
+   54  yum install subversion-devel
+   55  ../configure --prefix=/usr/local/mesos0.28.0
+   56  yum list | grep cram
+   57  yum list | grep md5
+   58  yum list | grep sasl
+   59  yum install cyrus-sasl-md5
+   60  ../configure --prefix=/usr/local/mesos0.28.0
+   61  yum list | grep java
+   62  yum list | grep openjdk
+   63  yum install java-1.8.0-openjdk
+   64  ../configure --prefix=/usr/local/mesos0.28.0
+   65  java -version
+   66  which java
+   67  ll /bin/java
+   68  ll /etc/alternatives/
+   69  cd /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.77-0.b03.el7_2.x86_64/
+   70  ll
+   71  cd $OLDPWD
+   72  ll /etc/alternatives/jre
+   73  ../configure --prefix=/usr/local/mesos0.28.0
+   74  export JAVA_HOME="/etc/alternatives/jre"
+   75  ../configure --prefix=/usr/local/mesos0.28.0
+   76  echo $JAVA_HOME 
+   77  export JAVA_HOME="/etc/alternatives"
+   78  ../configure --prefix=/usr/local/mesos0.28.0
+   79  yum list | grep jni
+   80  yum list | grep gcj
+   81  yum list | grep jdk
+   82  yum install java-1.8.0-openjdk-devel
+   83  which java
+   84  ll /bin/java
+   85  ll /etc/alternatives
+   86  ../configure --prefix=/usr/local/mesos0.28.0
+   87  ../configure --help | grep JNI
+   88  ../configure --help
+   89  ../configure --prefix=/usr/local/mesos0.28.0
+   90  find / -name jni.h
+   91  ../configure --help
+   92  find / -name jni.h
+   93  ../configure --prefix=/usr/local/mesos0.28.0 --includedir=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.77-0.b03.el7_2.x86_64/include
+   94  echo $JAVA_HOME 
+   95  export JAVA_HOME="/etc/alternatives/java"
+   96  ../configure --prefix=/usr/local/mesos0.28.0
+   97  history 
