@@ -28,33 +28,7 @@ cd /home/vagrant/provisioner
 ansible-playbook -i hosts provisioner.yml
 
 
-yum install -y autoconf
-
-yum install -y gcc
-
-yum install -y gcc-c++
-
-yum install -y patch
-
-yum install -y zlib
-yum install -y zlib-devel
-
-yum install -y libcurl-devel
-
-yum install -y apr-devel
-
-yum install -y subversion-devel
-
-yum install -y cyrus-sasl-md5
-
-yum install -y java-1.8.0-openjdk
-yum install -y java-1.8.0-openjdk-devel
-
-
-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.77-0.b03.el7_2.x86_64"
-
-yum install maven
-yum install python-devel
+#export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.77-0.b03.el7_2.x86_64"
 
 #wget http://www.apache.org/dist/mesos/0.28.0/mesos-0.28.0.tar.gz
 #tar zxf mesos-0.28.0.tar.gz
