@@ -4,29 +4,16 @@
 yum -y install epel-release
 yum -y install git ansible
 
-# git clone playbook
-#cd /home/vagrant
-#git clone https://github.com/gomesuit/ansible_Playbook.git
-#cd ansible_Playbook
-
-# run ansbile
-#ansible-playbook -i hosts localhost.yml
-
-# git clone serverspec file
-#cd /home/vagrant
-#git clone https://github.com/gomesuit/serverspecFile.git
-
-# run serverspec
-#cd serverspecFile
-#rake spec
-
 # git clone provisioner
 cd /home/vagrant
 git clone https://github.com/gomesuit/provisioner.git
+
 # run ansbile
 cd /home/vagrant/provisioner
 ansible-playbook -i hosts provisioner.yml
 
+# install mesos
+ansible-playbook -i hosts mesos.yml
 
 #export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.77-0.b03.el7_2.x86_64"
 
